@@ -1,0 +1,64 @@
+.form {
+  width: 300px;
+  margin: 300px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__field {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  &__input-loader {
+    position: absolute;
+    right: -26px;
+  }
+  &__message {
+    margin-bottom: 20px;
+    &_failed {
+      color: red;
+    }
+    &_success {
+      color: green;
+    }
+  }
+}
+
+span.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
